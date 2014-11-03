@@ -1,0 +1,130 @@
+#cafe{
+    
+   position: absolute;
+    
+    
+margin:0px ;
+
+background:khaki;
+border: 0px solid ;
+left: 10.8%;
+width: 30%;
+height:77%;
+
+
+
+}
+
+#logo{
+ 
+    position: absolute;
+    height:50%;
+    width:50%;
+    background-image: url('logohotel.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    left:15%;
+    margin-top:3%;
+    
+    left:  30.4%;	
+
+}
+#caja6{
+  
+  position: absolute;
+    text-align: center;
+    border-radius: 0px;
+    left: 11%;
+    margin-top: 65%;
+}
+
+#letra{
+  
+  
+    text-align: center;
+   
+}
+#boton{
+     border: 1px solid black;
+    position: absolute;
+     padding: 3%;
+    margin-top: 102%;
+    
+    left: 45%
+        ;
+     background: black;
+     
+     border-radius: 20%;
+   
+}
+#caja{
+     border: 1px solid black;
+    position: absolute;
+  width: 261%;
+  height: 12%;
+    margin-top: 125%;
+    
+   
+        ;
+     background: brown;
+     
+  
+   
+}
+#cama{
+ 
+    position: absolute;
+    height:55%;
+    width:29%;
+    background-image: url('1.jpg');
+    background-repeat: no-repeat;
+   
+ 
+    margin-top:5%;
+    
+  left: 41%;	
+
+}
+#diana{
+ 
+    position: absolute;
+    height:51%;
+    width:59%;
+    background-image: url('diana.jpg');
+    background-repeat: no-repeat;
+   
+ 
+    margin-top:22.6%;
+    
+  left: 41%;	
+
+}
+     
+#diana2{
+ 
+    position: absolute;
+    height:41%;
+    width:37%;
+    background-image: url('diana2.jpg');
+    background-repeat: no-repeat;
+   
+ 
+    margin-top:1%;
+    
+  left: 61%;	
+
+}
+#diana3{
+ 
+    position: absolute;
+    height:32.8%;
+    width:26%;
+    background-image: url('diana3.jpg');
+    background-repeat: no-repeat;
+   
+ 
+    margin-top:19.3%;
+    
+  left: 61%;	
+
+}
