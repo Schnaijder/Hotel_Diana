@@ -1,0 +1,311 @@
+
+#pie {
+ 
+    position: absolute;
+    height:35%;
+    width:99%;
+    background-image: url('pie.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+   
+    margin-top:43%;
+    
+  
+
+}
+
+#logo {
+ 
+    position: absolute;
+    height:99px;
+    width:140px;
+    background-image: url('logoHotel.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    left:100px;
+    margin-top:.4%;
+    
+    left:  24.4%;	
+
+}
+
+
+#reservacion {
+
+    
+    
+   position: absolute;
+
+
+background:#749aef;
+border: 3px solid ;
+
+width: 17.4%;
+height:48%;
+margin-top:3.7%;
+
+left:3%;
+
+}
+#caja2 {
+
+    
+    
+   position: absolute;
+margin:0px ;
+
+background:dimgray;
+border: 3px solid ;
+
+width: 16.4%;
+height:35%;
+margin-top:3.7%;
+
+right:3%;
+
+}
+#lema{
+    
+    position: absolute;
+   width: 99%;
+   height: 12%;
+   background: #465ce0;
+   margin-top: 36%;
+     text-align: center;
+}
+    
+
+#cajagrande{
+    
+    
+     border: 3px solid black;
+   
+ 
+height:99%; 
+     width: 100%;
+    
+}
+    
+
+
+
+
+
+
+#caja1 {
+ 
+    position: absolute;
+    height:50%;
+    width:50%;
+
+    background-size: 100%; 
+   
+    margin-top:12.4%;
+    
+    left:  26.1%;	
+
+}
+
+#caja6{
+    background: black;
+    margin: 0px 0px 0px 0px;
+    border: 2px solid #99ff00;
+    padding: 35px;
+    text-align: center;
+    border-radius: 0px;
+}
+
+
+
+
+
+                      
+    
+      
+    
+   	
+
+#regla{
+    
+    
+   
+    background: #ff0099;
+    margin: 0px 95px 0px 95px;
+    border: 2px solid #99ff00;
+    padding: 30px;
+    text-align: center;
+    border-radius: 30px;
+
+}
+
+ul{
+    display: inline;
+     width: 35px;
+   margin: 0 auto;
+   padding: 0;
+}
+ul li{
+    
+    
+    list-style: none;
+    text-align: center;
+}
+
+ul > li{
+    
+    position: relative;
+    float: left;
+  left: 20%;
+    width: 140px;
+    background: black;
+}
+
+ul  li  a{
+    
+    
+   display: block;
+    color: white;
+   padding: 1em 0;
+    text-decoration: none;
+    
+}
+ul li ul{
+ 
+    display: none;
+    position: absolute;
+}
+
+ul li:hover ul{
+ 
+    display: block;
+}
+
+ul li ul li:hover{
+ 
+   background: rgb(200, 200, 200);
+}
+ul li ul li a:hover{
+    font-weight: 400;
+    color: black;
+}
+ #redes{
+    
+    
+     position: absolute;
+   
+
+  
+   
+    margin-top:1.4%;
+    
+    left:  10.3%;	
+    
+    }
+    
+ ul #colorredes{
+    display: inline;
+     width: 35%;
+   margin: 0 auto;
+   padding: 0;
+}
+ ul li #colorredes{
+    
+    
+    list-style: none;
+    text-align: center;
+}
+
+
+
+ ul  li  a #colorredes{
+    
+    
+   display: block;
+    color: white;
+   padding: 1em 0;
+    text-decoration: none;
+    
+}
+ ul li ul #colorredes{
+ 
+    display: none;
+    position: absolute;
+}
+
+ ul li:hover ul #colorredes{
+ 
+    display: block;
+}
+#Facebook {
+ 
+    position: absolute;
+    height:215%;
+    width:13%;
+    background-image: url('Facebook.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+   
+    margin-top:13%;
+    
+    left: 23.2%
+    
+    	
+
+}
+#twitter {
+ 
+    position: absolute;
+     height:213%;
+    width:12%;
+    background-image: url('twitter.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+   
+    margin-top:13.5%;
+    
+    left: 44.2%
+    	
+
+}
+#gplus {
+ 
+    position: absolute;
+    height:219%;
+    width:17%;
+    background-image: url('gplus.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+   
+   margin-top:11.4%;
+    
+    left: 62.2%
+
+}
+#instagram {
+ 
+    position: absolute;
+    height:211%;
+    width:11.8%;
+    background-image: url('instagram.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+   
+   margin-top:13.8%;
+    
+    left: 85.2%
+
+}
+#youtube {
+ 
+    position: absolute;
+    height:211%;
+    width:11.8%;
+    background-image: url('youtube.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+   
+   margin-top:13.8%;
+    
+    left: 103%
+
+}
