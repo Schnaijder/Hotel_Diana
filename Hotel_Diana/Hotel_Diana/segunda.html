@@ -1,28 +1,4 @@
-<?php
-session_start();
-//datos para establecer la conexion con la base de mysql.
-mysql_connect('localhost','root','root','acceder')or die ('Ha fallado la conexión: '.mysql_error());
-mysql_select_db('acceder')or die ('Error al seleccionar la Base de Datos: '.mysql_error());
-
-	function quitar($mensaje)
-{
-	$nopermitidos = array("'",'\\','<','>',"\"");
-	$mensaje = str_replace($nopermitidos, "", $mensaje);
-	return $mensaje;
-
-}
-
-if(trim($_POST["usuario"]) != "" && trim($_POST["password"]) != "")
-{
-
-	$usuario = strtolower(htmlentities($_POST["usuario"], ENT_QUOTES));
-	$password = $_POST["password"];
-	$result = mysql_query('SELECT password, usuario FROM acceder WHERE usuario=\''.$usuario.'\'');
-	if($row = mysql_fetch_array($result)){
-		if($row["password"] == $password){
-			$_SESSION["k_username"] = $row['usuario'];
-			?>
-		<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <title>Hotel Diana</title>
@@ -75,7 +51,7 @@ if(trim($_POST["usuario"]) != "" && trim($_POST["password"]) != "")
    <div id="caja6"><font face="monotype corsiva" size="8" color="white">HOTEL DIANA</font></div>
   
             <nav>
-              
+                
                 <ul>
                     
                     <li><a href = "#">Inicio</a></li>
@@ -113,15 +89,6 @@ if(trim($_POST["usuario"]) != "" && trim($_POST["password"]) != "")
                     
                 <section id="reservacion">
                      <!--Nuevo Motor-->
-                        <?php 
-                         $fo_reserv
-                         $id_usr
-                         $fo_hab
-                         $
-
-
-                        ?>
-     
             <tr>
                 <th><font color="white" face="Monotype corsiva" size="5" ><center> Reservación En Línea</center></font></th>
             </tr>
@@ -147,19 +114,18 @@ if(trim($_POST["usuario"]) != "" && trim($_POST["password"]) != "")
 						<div class="etWheader">
                                                     
                                                     
-                                                    <label><font color="#7438ee" face="Monotype corsiva" size="4" ><center>Tipo de habitacion:</center></font></label>
+                                                    <label><font color="#7438ee" face="Monotype corsiva" size="4" ><center>Cuartos:</center></font></label>
             
                                                     
                                                     <center> <div class="etWSelect rm etWSmall"><select name="rm">
-                                                      
-							<option value="1">Sencilla</option>
-							<option value="2">Grande</option>
-							<option value="3">Doble</option>
-           
-							
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
                                                             </select><span></span></div>
                                                     </center>
-                                                   <label><font color="#7438ee" face="Monotype corsiva" size="4" ><center>Personas:</center>
+                                                   <label><font color="#7438ee" face="Monotype corsiva" size="4" ><center>Adultos:</center>
                                                             </font></label>
             
                                                     <center>
@@ -170,14 +136,22 @@ if(trim($_POST["usuario"]) != "" && trim($_POST["password"]) != "")
 							<option value="4">4</option>
 							<option value="5">5</option>
                                                             </select><span></span></div></center>
-                                                    
+                                                     <label><font color="#7438ee" face="Monotype corsiva" size="4" ><center>Niños:</center>
                                                         
-
+                                                         <center>
+						<div class="etWSelect rm etWSmall"><select name="rm">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select><span></span></div>
+                                                         </center>
                                                          
                                                         
                                                          <p>  <center>
                                                              <div class="button">
-						<input type="submit" value="Registrar"/>
+						<input type="submit" value="Buscar"/>
                                                              </div></center>
                                                      </p>
 				</form>
@@ -192,7 +166,29 @@ if(trim($_POST["usuario"]) != "" && trim($_POST["password"]) != "")
                    
             </nav>
    
-   
+    <form id="caja2">
+            
+                   
+                    <p>
+                        <label><font face="Gabriola" size="5" color="white">Usuario:</font></label>
+                         <input type="text" id="nombre" placeholder="Usuario">
+                         
+                        
+                        
+                    </p>
+                    <p>
+                         <label><font face="Gabriola" size="5" color="white">Password:</font></label>
+                         <input type="text" id="nombre" placeholder="Password">
+                    </p>
+                    
+                   
+                         <button><a href="Registrar Usuario.html">Registar Usuario</a></button>
+    </p>
+                     <input type="submit" id="save"  value="Acceder"/>
+                          <input type="reset" id="erase"  value="Cancelar"/>
+                        
+                         </form
+                         
                          
                          <section id="mapa1"  >
     
@@ -204,7 +200,7 @@ AIzaSyAR_MeZWQsdoXRCZ9VXRIQ_kCRqBuQ2Q2o&sensor=true">
        
     </head>
     <body onload="initialize()">
-      
+        <div id="mapa_para_canvas"></div>
                               
         </section>
   
@@ -261,47 +257,3 @@ AIzaSyAR_MeZWQsdoXRCZ9VXRIQ_kCRqBuQ2Q2o&sensor=true">
   
 </body>
 </html>
-        
-       
-   
-      
-             
-          
-        
-        
-        
-        
-               <?php
-		}else{
-                    
-                    
-                    
-                  
-		echo'Password incorrecto';
-		}
-	}else{
-            
-            	?> 
-<script language="javascript"> 
-alert("El Usuario y contraseña no existente en la base de datos.");
-window.location="index.php";
-</script> 
-<?php 
-		
-	}
-	mysql_free_result($result);
-}else{
-    
-       	?> 
-<script language="javascript"> 
-alert("Debe especificar un usuario y password.");
-window.location="index.php";
-</script> 
-<?php 
-	
-	
-}
-mysql_close();
-?>
-
-        
