@@ -1,6 +1,15 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/11/2014, 11:53:49 AM
+    Author     : Isac
+*/
 
 body{
-	
+  background-image: url('Fondo2.jpg');
 }
 
 h2{
@@ -83,7 +92,7 @@ ul li ul li a:hover{
     left:100px;
     margin-top:.4%;
     
-    left:  24.4%;	
+    left:  24.4%; 
 
 }
 #caja1 {
@@ -92,7 +101,7 @@ ul li ul li a:hover{
     height:50%;
     width:61.5%;
     background-size: 100%; 
-    left:  15.5%;	
+    left:  15.5%; 
 
 }
 
@@ -108,7 +117,7 @@ ul li ul li a:hover{
 
 #CHabitacion{
 border: 1px solid green; 
-height: 1610px;
+height: 900px;
 width: 1016px;
 margin-top: 260px;
 background-color: black;
@@ -119,38 +128,9 @@ background-color: black;
 background-color: deeppink;
 }
 
-#HG{
-   
-  background-image:  url('HG.jpg');
-  background-repeat: no-repeat;
-  height: 80%;
-  width: 35%;
-  margin-left: 3%;
-  margin-top: 3%;
-float: left;
- 
-}
 
-#HM{
- background-image:  url('HM.jpg');
-  background-repeat: no-repeat;
-  height: 80%;
-  width: 35%;
-  margin-left: 3%;
-  margin-top: 3%;
-float: left;
-}
 
-#HD{
- background-image:  url('HD.jpg');
-  background-repeat: no-repeat;
-  height: 80%;
-  width: 35%;
-  margin-left: 3%;
-  margin-top: 3%;
-float: left;
-  
-}
+
 h1{
 font-size: 40px;
 font-style: italic;
@@ -160,48 +140,23 @@ text-align: center;
 h3{
 
     font-size: 23px
-color:white;
+
 }
 #PH{ 
   border: 2px solid deeppink;
-  height: 20%;
+  height: 50%;
   width: 100%;
 }
-p{
-    color: white;
-    font-size: 40px;
-    font-style: inherit;
-    font-weight: 10px;
-    text-align: center;
-    font-family: fantasy;
 
-}
 
-#T1{
-float: right;
-height: 98%;
-width: 58%;
-}
 
-#l1{
-    color: white;
-    font-size: 22px;
-    text-decoration: underline;
-    position: static;
-    margin-left: 80px;
-}
-b{
-    color: white;
-    font-size: 22px;
-  
-}
 
 #RS{
 
   
   height: 30%;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 5px;
 
 }
 #Facebook {
@@ -259,32 +214,18 @@ b{
 
 }
 #T2{
- border: 2px solid white;
- height: 10%;
- width: 55%;
+ 
+ height: 30%;
+ width: 60%;
  float: right;
-
- margin-top: 10%;
+ margin-top: 30%;
 
 }
-#T3{
-
-border: 2px solid green;
-height: 10%;
-margin-top: 2%;
-width: 70%;
-margin-left: 15%;
-}
-#Tex{
-font-size: 30px;
-color: white;
-font-style: inherit;
-text-align: right;
-}
-#boton_reserva{
-  margin-left: 500px;
-margin-bottom: 1000px;
-width: 15%;
-height: 10%;
+#reservacion{
+  margin-top: 30px;
+  margin-left: 300px;
+border: 1px solid pink;
+width: 40%;
+height: 80%;
 
 }
