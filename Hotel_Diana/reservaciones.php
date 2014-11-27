@@ -61,7 +61,60 @@
               <option value="3">Habitacion Doble</option>
                             
                                                             </select><span></span></div>
-                                                  
+            <?php 
+
+            $sql='insert into';
+            $retorno='';
+            $ret=0;
+
+            if (isset($_POST['tabla'])){
+
+            	$tabla=$_POST['tabla'];
+            	$sql=$sql.$tabla.'values(';
+            	
+
+            if(isset($_POST['FO_RESERVACION']) && isset($_POST['ID']) && isset($_POST['FO_HABITACION']) 
+            	&& isset($_POST['FECHA_ENTRADA']) && isset($_POST['FECHA_SALIDA']) && isset($_POST['TIPO_HABITACION']) && isset($_POST['PERSONAS']))
+            {
+            		$id=$_POST['FO_RESERVACION'];
+            		$usuario=$_POST['ID'];
+            		$habitacion=$_POST['FO_HABITACION'];
+            		$fechae=$_POST['FECHA_ENTRADA'];
+            		$fechas=$_POST['FECHA_SALIDA'];
+            		$personas=$_POST['PERSONAS'];
+
+            		$sql=$sql."'$id','$usuario', '$habitacion', '$fechae', '$fechas', '$personas')";
+
+						
+					$retorno='reservaciones.php';
+            }else{
+            	die('Error de datos')
+            }
+        }
+        	require_once 'config.php';
+
+        		$conexion=mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$base);
+        		$ret=1;
+        		$res=mysqli_query($conexion, $sql) or $ret=0;
+
+        		header('Location: ../'.$retorno.'?res='.$ret);	
+
+        	            ?> 
+
+
+
+
+       <?php 
+       		if(isset($_GET['res'])){
+       			$resultado=$_GET['res'];
+       			if ($resultado==1) {
+       				?>
+       				<div>LA reservacion se registro correctamente</div>
+       			}
+       		}
+       		
+
+       ?>                                     
                                                          
                                                         
                                                          <p>  <center>

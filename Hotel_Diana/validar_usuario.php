@@ -1,27 +1,43 @@
-<?php
-session_start();
-//datos para establecer la conexion con la base de mysql.
-mysql_connect('localhost','root','root','acceder')or die ('Ha fallado la conexión: '.mysql_error());
-mysql_select_db('acceder')or die ('Error al seleccionar la Base de Datos: '.mysql_error());
+ <?php 
 
-	function quitar($mensaje)
-{
-	$nopermitidos = array("'",'\\','<','>',"\"");
-	$mensaje = str_replace($nopermitidos, "", $mensaje);
-	return $mensaje;
+            $sql='insert into';
+            $retorno='';
+            $ret=0;
 
-}
+            if (isset($_POST['tabla'])){
 
-if(trim($_POST["usuario"]) != "" && trim($_POST["password"]) != "")
-{
+              $tabla=$_POST['tabla'];
+              $sql=$sql.$tabla.'values(';
+              
 
-	$usuario = strtolower(htmlentities($_POST["usuario"], ENT_QUOTES));
-	$password = $_POST["password"];
-	$result = mysql_query('SELECT password, usuario FROM acceder WHERE usuario=\''.$usuario.'\'');
-	if($row = mysql_fetch_array($result)){
-		if($row["password"] == $password){
-			$_SESSION["k_username"] = $row['usuario'];
-			?>
+            if(isset($_POST['id']) && isset($_POST['usuario']) && isset($_POST['password']) 
+              && isset($_POST['descripcion']) && isset($_POST['email']) && isset($_POST['fecha']) && isset($_POST['telefonico']))
+            {
+                $id=$_POST['id'];
+                $usuario=$_POST['usuario'];
+                $password=$_POST['password'];
+                $des=$_POST['descripcion'];
+                $email=$_POST['email'];
+                $f=$_POST['fecha'];
+                $te=$_POST['telefonico'];
+
+                $sql=$sql."'$id','$usuario', '$password', '$des', '$email', '$f', '$te')";
+
+            
+          $retorno='validar_usuario.php';
+            }else{
+              die('Error de datos')
+            }
+        }
+          require_once 'config.php';
+
+            $conexion=mysqli_connect(config::$servidor, config::$usuario, config::$password, config::$base);
+            $ret=1;
+            $res=mysqli_query($conexion, $sql) or $ret=0;
+
+            header('Location: ../'.$retorno.'?res='.$ret);  
+
+                      ?> 
 		<!DOCTYPE html>
 <html>
     <head>
