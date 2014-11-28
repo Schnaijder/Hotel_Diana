@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2014-11-22 15:37:31
+Date: 2014-11-27 18:05:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,15 +26,28 @@ CREATE TABLE `acceder` (
   `descripcion` text CHARACTER SET utf8 COLLATE utf8_spanish_ci,
   `email` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `fecha` date NOT NULL,
-  `telefonico` int(10) NOT NULL,
+  `telefonico` varchar(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of acceder
 -- ----------------------------
-INSERT INTO `acceder` VALUES ('1', 'a', 'nose', null, 'nksdbv', '2014-11-14', '1561');
-INSERT INTO `acceder` VALUES ('2', 'al', '123', null, 'kbjhbj', '2014-11-21', '1565');
+
+-- ----------------------------
+-- Table structure for administrador
+-- ----------------------------
+DROP TABLE IF EXISTS `administrador`;
+CREATE TABLE `administrador` (
+  `id` int(10) NOT NULL,
+  `administrador` varchar(50) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of administrador
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for habitaciones
@@ -54,22 +67,20 @@ CREATE TABLE `habitaciones` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for horario
+-- Table structure for imagenes
 -- ----------------------------
-DROP TABLE IF EXISTS `horario`;
-CREATE TABLE `horario` (
-  `FO_HORARIO` varchar(50) NOT NULL,
-  `FO_PERSONAL` varchar(50) NOT NULL,
-  `DIAS` date NOT NULL,
-  `HORA_ENTRANTE` date NOT NULL,
-  `HORA_SALIDA` date NOT NULL,
-  PRIMARY KEY (`FO_HORARIO`),
-  KEY `FK_HORARIO_REFERENCE_PERSONAL` (`FO_PERSONAL`),
-  CONSTRAINT `FK_HORARIO_REFERENCE_PERSONAL` FOREIGN KEY (`FO_PERSONAL`) REFERENCES `personal` (`FO_PERSONAL`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `imagenes`;
+CREATE TABLE `imagenes` (
+  `IDimagenes` int(11) NOT NULL,
+  `IDTipo` int(11) NOT NULL,
+  `direccion` varchar(45) NOT NULL,
+  PRIMARY KEY (`IDimagenes`),
+  KEY `imagen` (`IDTipo`),
+  CONSTRAINT `imagen` FOREIGN KEY (`IDTipo`) REFERENCES `tipo` (`IDTipo`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of horario
+-- Records of imagenes
 -- ----------------------------
 
 -- ----------------------------
@@ -128,16 +139,16 @@ CREATE TABLE `productos` (
 DROP TABLE IF EXISTS `reservaciones`;
 CREATE TABLE `reservaciones` (
   `FO_RESERVACION` int(10) NOT NULL,
-  `ID_USUARIO` varchar(50) NOT NULL,
+  `ID` int(11) NOT NULL,
   `FO_HABITACION` varchar(50) NOT NULL,
-  `FECHA_ENTREDA` date NOT NULL,
+  `FECHA_ENTRADA` date NOT NULL,
   `FECHA_SALIDA` date NOT NULL,
   `TIPO_HABITACION` varchar(50) NOT NULL,
   `PERSONAS` int(1) NOT NULL,
   PRIMARY KEY (`FO_RESERVACION`),
-  KEY `ID_USUARIO` (`ID_USUARIO`),
+  KEY `ID_USUARIO` (`ID`),
   KEY `FO_HABITACION` (`FO_HABITACION`),
-  CONSTRAINT `reservaciones_ibfk_1` FOREIGN KEY (`ID_USUARIO`) REFERENCES `usuarios` (`ID_USUARIO`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `reservar` FOREIGN KEY (`ID`) REFERENCES `acceder` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`FO_HABITACION`) REFERENCES `habitaciones` (`FO_HABITACION`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -146,19 +157,18 @@ CREATE TABLE `reservaciones` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for usuarios
+-- Table structure for tipo
 -- ----------------------------
-DROP TABLE IF EXISTS `usuarios`;
-CREATE TABLE `usuarios` (
-  `ID_USUARIO` varchar(50) NOT NULL,
-  `PASSWORD` varchar(10) NOT NULL,
-  `EMAIL` varchar(40) NOT NULL,
-  `TELEFONO` int(12) NOT NULL,
-  PRIMARY KEY (`ID_USUARIO`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `tipo`;
+CREATE TABLE `tipo` (
+  `IDTipo` int(11) NOT NULL,
+  `categoria` varchar(45) NOT NULL,
+  `seccion` varchar(45) NOT NULL,
+  PRIMARY KEY (`IDTipo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
--- Records of usuarios
+-- Records of tipo
 -- ----------------------------
 DROP TRIGGER IF EXISTS `apartar`;
 DELIMITER ;;
