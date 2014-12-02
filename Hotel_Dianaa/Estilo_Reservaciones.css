@@ -1,0 +1,175 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 21/11/2014, 11:53:49 AM
+    Author     : Isac
+*/
+
+
+
+
+
+ul{
+    display: inline;
+     width: 35px;
+   margin: 0 auto;
+   padding: 0;
+}
+ul li{
+    
+    
+    list-style: none;
+    text-align: center;
+}
+
+ul > li{
+    
+    position: relative;
+    float: left;
+  left: 15%;
+    width: 170px;
+    background: black;
+    margin-top: 4%;
+    }
+
+ul  li  a{
+    
+    
+   display: block;
+    color: white;
+   padding: 1em 0;
+    text-decoration: none;
+    
+}
+ul li ul{
+ display: none;
+    position: absolute;
+}
+
+ul li:hover ul{
+         display: block; 
+
+}
+
+ul li ul li:hover{
+ 
+   background-color: pink;
+}
+ul li ul li a:hover{
+    font-weight: 400;
+    color: black;
+}
+#pie {
+ 
+    position: absolute;
+    height:35%;
+    width:99%;
+    background-image: url('pie.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    margin-top:43%;
+    
+}
+
+#logo {
+ 
+    position: absolute;
+    height:99px;
+    width:140px;
+    background-image: url('logoHotel.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    left:100px;
+    margin-top:.4%;
+    
+    left:  24.4%; 
+
+}
+#caja1 {
+ 
+    position: absolute;
+    height:50%;
+    width:61.5%;
+    background-size: 100%; 
+    left:  15.5%; 
+
+}
+
+#caja6{
+    background: black;
+    margin: 0px 0px 0px 0px;
+    border: 4px solid deeppink;
+    padding: 34px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+#CHabitacion{
+border: 1px solid green; 
+height: 900px;
+width: 1016px;
+margin-top: 260px;
+background-color: black;
+
+}
+
+
+
+
+
+
+h1{
+font-size: 40px;
+font-style: italic;
+text-align: center;
+
+}
+h3{
+
+    font-size: 23px
+
+}
+#PH{ 
+  border: 2px solid deeppink;
+  height: 50%;
+  width: 100%;
+}
+
+
+
+
+#RS{
+
+  
+  height: 30%;
+  width: 100%;
+  margin-top: 5px;
+
+}
+
+#T{
+  color: white;
+  text-align: center;
+  font-size: 34px;
+
+}
+#T2{
+ 
+ height: 30%;
+ width: 60%;
+ float: right;
+ margin-top: 30%;
+
+}
+#reservacion{
+  margin-top: 30px;
+  margin-left: 300px;
+border: 1px solid pink;
+width: 40%;
+height: 80%;
+
+}
