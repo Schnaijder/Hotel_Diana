@@ -1,0 +1,93 @@
+#cafe{
+    
+   position: absolute;
+    
+    
+margin-top: 8.5%;
+
+background:khaki;
+border: 0px solid ;
+left: 10.8%;
+width: 30%;
+height:56.5%;
+
+
+
+}
+
+
+#admin{
+   position: absolute;
+  
+   left:  69%;
+   margin-top: 1%;
+    
+    
+}
+
+
+
+#logo{
+ 
+    position: absolute;
+    height:35%;
+    width:35%;
+    background-image: url('logohotel.png');
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    left:15%;
+    margin-top:3%;
+    
+    left:  30.4%;	
+
+}
+#caja6{
+  
+  position: absolute;
+    text-align: center;
+    border-radius: 0px;
+    left: 11%;
+    margin-top: 35%;
+}
+#caja67{
+  
+  position: absolute;
+    text-align: center;
+    border-radius: 0px;
+    left: 11%;
+    margin-top: 10%;
+}
+
+
+
+
+#letra{
+  
+  
+    text-align: center;
+}
+
+#caja{
+  border: 1px solid black;
+  position: absolute;
+  width: 259%;
+  height: 12%;
+  margin-top: 106%;
+    
+   
+        
+     background: brown;
+     
+  
+   
+}
+
+#logito{
+    
+    
+    position: absolute;
+    float: left;
+    left: 10%;
+    margin-top: 50%;
+}
+

@@ -1,0 +1,84 @@
+
+
+
+
+#inicio{
+
+position: absolute;
+border:solid 1px black;
+color:whitesmoke;
+font: solid bold ;
+    border-radius: 25px;
+    padding: 20px;
+  
+    background: khaki;
+    width: 53%;
+    height: 35%;
+
+    margin-top: 55%;
+    
+    left: 23%
+    
+    
+}
+
+
+#ini{
+
+position:absolute;
+
+background: khaki;
+    width: 56%;
+    height: 56%;
+border-radius: 10%;
+    margin-top: 33%;
+    border:solid 1px black;
+    left: 22%
+    
+}
+
+#caja1{
+
+
+
+     border: 1px solid black;
+    position: absolute;
+   width: 15%;
+
+   height: 4.3%;
+    margin-top:93%;
+    
+    left: 48%
+        ;
+     background: gray;
+     
+     border-radius: 20%;
+   
+
+
+}
+
+
+
+
+
+#caja2{
+
+
+
+     border: 1px solid black;
+    position: absolute;
+  
+    margin-top: 5%;
+    
+    left: 5%
+        ;
+     background: black;
+     
+     border-radius: 20%;
+   
+
+
+}
+
+
